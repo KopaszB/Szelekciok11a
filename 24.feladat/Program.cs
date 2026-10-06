@@ -12,12 +12,12 @@ namespace _24.feladat
         {
             Console.Write("Kérek egy hónapot(1 - 12-ig): ");
             int honap = int.Parse(Console.ReadLine());
-
+            /*
             if (honap == 12 || honap == 1 || honap == 2)
             {
                 Console.WriteLine("Tél");
             }
-            else if (honap == 3 || honap == 4 || honap == 5) 
+            else if (honap == 3 || honap == 4 || honap == 5)
             {
                 Console.WriteLine("Tavasz");
             }
@@ -32,6 +32,35 @@ namespace _24.feladat
             else
             {
                 Console.WriteLine("Nincs ilyen hónap!");
+            }
+            */
+
+            switch (honap)
+            {
+                case 1:
+                case 2:
+                case 12:
+                    Console.WriteLine("Tél");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    Console.WriteLine("Tavasz");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    Console.WriteLine("Nyár");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    Console.WriteLine("Ősz");
+                    break;
+
+                default:
+                    Console.WriteLine("Nincs ilyen hónap!");
+                    break;
             }
 
             Console.ReadKey();
